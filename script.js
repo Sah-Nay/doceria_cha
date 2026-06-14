@@ -12,6 +12,24 @@ document.addEventListener('DOMContentLoaded',()=>{
 
 	const selected = [] // array of {name, price, quantity}
 
+	// Funções para persistência de dados
+	function saveCart(){
+		localStorage.setItem('doceria_cha_cart', JSON.stringify(selected))
+	}
+
+	function loadCart(){
+		const saved = localStorage.getItem('doceria_cha_cart')
+		if(saved){
+			try {
+				const data = JSON.parse(saved)
+				selected.push(...data)
+				updateCart()
+			} catch(e){
+				console.warn('Erro ao carregar carrinho salvo:', e)
+			}
+		}
+	}
+
 	function formatPrice(v){
 		return v.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})
 	}
@@ -88,6 +106,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 		cartHeader.textContent = totalItems > 0 ? `Itens selecionados (${totalItems})` : 'Itens selecionados'
 		finishBtn.disabled = selected.length === 0
 		updateSelectionButtons()
+		saveCart()
 	}
 
 	function findSelectedIndexByName(name){
@@ -154,6 +173,10 @@ document.addEventListener('DOMContentLoaded',()=>{
 		const msg = `Olá! Gostaria de fazer um pedido:\n${lines.map(l=>' - '+l).join('\n')}\nTotal: ${total}`
 		const url = `https://wa.me/${whatsappPhone}?text=${encodeURIComponent(msg)}`
 		window.open(url, '_blank')
+		// Limpar carrinho após enviar
+		selected.length = 0
+		localStorage.removeItem('doceria_cha_cart')
+		updateCart()
 	})
 
 	// menu modal: build list from DOM
@@ -200,5 +223,8 @@ document.addEventListener('DOMContentLoaded',()=>{
 	})
 	// close modal when clicking outside panel
 	menuModal.addEventListener('click',(e)=>{ if(e.target===menuModal){ menuModal.classList.remove('open'); menuModal.setAttribute('aria-hidden','true') } })
+
+	// Carregar carrinho salvo ao iniciar
+	loadCart()
 
 })
