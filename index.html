@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doceria Chá - Cardápio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="site-header">
+        <h1>Doceria Chá</h1>
+        <p>Escolha seus itens e finalize pelo WhatsApp</p>
+        <button id="menu-btn" class="menu-btn" aria-label="Abrir menu">
+            <span class="menu-dot"></span>
+            <span class="menu-dot"></span>
+            <span class="menu-dot"></span>
+        </button>
+    </header>
+
+    <main class="menu">
+        <section class="category" id="bolos">
+            <h2>Bolos</h2>
+            <div class="items" id="bolos-items">
+                <!-- itens inseridos via HTML estático -->
+                <div class="item" data-name="Bolo de Chocolate" data-price="60.00">
+                    <div class="thumb" style="background-image:url('https://picsum.photos/seed/bolo1/200')"></div>
+                    <div class="info">
+                        <strong>Bolo de Chocolate</strong>
+                        <span class="price">R$ 60,00</span>
+                        <button class="select-btn">Selecionar</button>
+                    </div>
+                </div>
+                <div class="item" data-name="Bolo de Cenoura" data-price="45.50">
+                    <div class="thumb" style="background-image:url('https://picsum.photos/seed/bolo2/200')"></div>
+                    <div class="info">
+                        <strong>Bolo de Cenoura</strong>
+                        <span class="price">R$ 45,50</span>
+                        <button class="select-btn">Selecionar</button>
+                    </div>
+                </div>
+                <div class="item" data-name="Bolo Nega Maluca" data-price="55.00">
+                    <div class="thumb" style="background-image:url('https://picsum.photos/seed/bolo3/200')"></div>
+                    <div class="info">
+                        <strong>Bolo Nega Maluca</strong>
+                        <span class="price">R$ 55,00</span>
+                        <button class="select-btn">Selecionar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="category" id="cupcakes">
+            <h2>Cupcakes</h2>
+            <div class="items" id="cupcakes-items">
+                <div class="item" data-name="Cupcake Baunilha" data-price="8.50">
+                    <div class="thumb" style="background-image:url('https://picsum.photos/seed/cup1/200')"></div>
+                    <div class="info">
+                        <strong>Cupcake Baunilha</strong>
+                        <span class="price">R$ 8,50</span>
+                        <button class="select-btn">Selecionar</button>
+                    </div>
+                </div>
+                <div class="item" data-name="Cupcake Red Velvet" data-price="9.00">
+                    <div class="thumb" style="background-image:url('https://picsum.photos/seed/cup2/200')"></div>
+                    <div class="info">
+                        <strong>Cupcake Red Velvet</strong>
+                        <span class="price">R$ 9,00</span>
+                        <button class="select-btn">Selecionar</button>
+                    </div>
+                </div>
+                <div class="item" data-name="Cupcake Chocolate" data-price="9.50">
+                    <div class="thumb" style="background-image:url('https://picsum.photos/seed/cup3/200')"></div>
+                    <div class="info">
+                        <strong>Cupcake Chocolate</strong>
+                        <span class="price">R$ 9,50</span>
+                        <button class="select-btn">Selecionar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- menu modal -->
+    <div id="menu-modal" class="menu-modal" aria-hidden="true">
+        <div class="menu-panel">
+            <button id="menu-close" class="menu-close" aria-label="Fechar">✕</button>
+            <h3>Todos os itens</h3>
+            <div id="menu-list" class="menu-list"></div>
+        </div>
+    </div>
+
+    <aside class="cart" id="cart">
+        <h3>Itens selecionados</h3>
+        <ul id="cart-list"></ul>
+        <div class="cart-total">Total: <strong id="cart-total">R$ 0,00</strong></div>
+        <div class="cart-actions">
+            <button id="clear-btn" class="secondary">Limpar</button>
+            <button id="finish-btn" class="primary" disabled>Finalizar pedido (WhatsApp)</button>
+        </div>
+    </aside>
+
+    <script src="script.js"></script>
+</body>
+</html>
