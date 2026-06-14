@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doceria Chá - Cardápio</title>
+    <title>Doceria Chá</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header class="site-header">
-        <h1>Doceria Chá</h1>
+        <h1>Doceria Chá - Cardápio</h1>
         <p>Escolha seus itens e finalize pelo WhatsApp</p>
         <button id="menu-btn" class="menu-btn" aria-label="Abrir menu">
             <span class="menu-dot"></span>
@@ -20,30 +20,38 @@
 
     <main class="menu">
         <section class="category" id="bolos">
-            <h2>Bolos</h2>
+            <h2>Bolo de pote Clássico</h2>
             <div class="items" id="bolos-items">
                 <!-- itens inseridos via HTML estático -->
-                <div class="item" data-name="Bolo de Chocolate" data-price="60.00">
-                    <div class="thumb" style="background-image:url('https://picsum.photos/seed/bolo1/200')"></div>
+                <div class="item" data-name="Brigadeiro" data-price="11.00">
+                    <div class="thumb" style="background-image:url('https://imageswscdn.wslojas.com.br/files/26706/bolo-de-pote-pop-vegan-200g-551867.jpeg')"></div>
                     <div class="info">
-                        <strong>Bolo de Chocolate</strong>
-                        <span class="price">R$ 60,00</span>
+                        <strong>Brigadeiro</strong>
+                        <span class="price">R$ 11,00</span>
                         <button class="select-btn">Selecionar</button>
                     </div>
                 </div>
-                <div class="item" data-name="Bolo de Cenoura" data-price="45.50">
-                    <div class="thumb" style="background-image:url('https://picsum.photos/seed/bolo2/200')"></div>
+                <div class="item" data-name="Beijinho" data-price="11.00">
+                    <div class="thumb" style="background-image:url('https://tse4.mm.bing.net/th/id/OIP.X5yQEqKg-JYnVZLBVzdmDAHaFY?cb=thfvnextfalcon2&rs=1&pid=ImgDetMain&o=7&rm=3')"></div>
                     <div class="info">
-                        <strong>Bolo de Cenoura</strong>
-                        <span class="price">R$ 45,50</span>
+                        <strong>Beijinho</strong>
+                        <span class="price">R$ 11,00</span>
                         <button class="select-btn">Selecionar</button>
                     </div>
                 </div>
-                <div class="item" data-name="Bolo Nega Maluca" data-price="55.00">
-                    <div class="thumb" style="background-image:url('https://picsum.photos/seed/bolo3/200')"></div>
+                <div class="item" data-name="Dois amores" data-price="11.00">
+                    <div class="thumb" style="background-image:url('https://minhasreceitinhas.com.br/wp-content/uploads/2023/09/Bolo-de-pote-de-brigadeiro-massa-de-chocolate.jpg')"></div>
                     <div class="info">
-                        <strong>Bolo Nega Maluca</strong>
-                        <span class="price">R$ 55,00</span>
+                        <strong>Dois amores</strong>
+                        <span class="price">R$ 11,00</span>
+                        <button class="select-btn">Selecionar</button>
+                    </div>
+                </div>
+                <div class="item" data-name="Mousse de limão" data-price="11.00">
+                    <div class="thumb" style="background-image:url('https://i.ytimg.com/vi/JgiuavnCbhg/maxresdefault.jpg')"></div>
+                    <div class="info">
+                        <strong>Mousse de limão</strong>
+                        <span class="price">R$ 11,00</span>
                         <button class="select-btn">Selecionar</button>
                     </div>
                 </div>
@@ -51,34 +59,103 @@
         </section>
 
         <section class="category" id="cupcakes">
-            <h2>Cupcakes</h2>
+            <h2>Bolo de pote tradicional</h2>
             <div class="items" id="cupcakes-items">
-                <div class="item" data-name="Cupcake Baunilha" data-price="8.50">
-                    <div class="thumb" style="background-image:url('https://picsum.photos/seed/cup1/200')"></div>
+                <div class="item" data-name="Cenoura com chocolate" data-price="12.00">
+                    <div class="thumb" style="background-image:url('https://tse3.mm.bing.net/th/id/OIP._0DLEbOkl1yM0Zrk8XT6hgHaEK?cb=thfvnextfalcon2&rs=1&pid=ImgDetMain&o=7&rm=3')"></div>
                     <div class="info">
-                        <strong>Cupcake Baunilha</strong>
-                        <span class="price">R$ 8,50</span>
+                        <strong>Cenoura com chocolate</strong>
+                        <span class="price">R$ 12,00</span>
                         <button class="select-btn">Selecionar</button>
                     </div>
                 </div>
-                <div class="item" data-name="Cupcake Red Velvet" data-price="9.00">
-                    <div class="thumb" style="background-image:url('https://picsum.photos/seed/cup2/200')"></div>
+                <div class="item" data-name="Brigadeiro com morango" data-price="12.00">
+                    <div class="thumb" style="background-image:url('https://tse1.mm.bing.net/th/id/OIP.eudOYQhezWM_uO78TJA_4AHaFj?cb=thfvnextfalcon2&rs=1&pid=ImgDetMain&o=7&rm=3')"></div>
                     <div class="info">
-                        <strong>Cupcake Red Velvet</strong>
-                        <span class="price">R$ 9,00</span>
+                        <strong>Brigadeiro com morango</strong>
+                        <span class="price">R$ 12,00</span>
                         <button class="select-btn">Selecionar</button>
                     </div>
                 </div>
-                <div class="item" data-name="Cupcake Chocolate" data-price="9.50">
-                    <div class="thumb" style="background-image:url('https://picsum.photos/seed/cup3/200')"></div>
+                <div class="item" data-name="Ninho e morango" data-price="12.00">
+                    <div class="thumb" style="background-image:url('https://thfvnext.bing.com/th/id/R.be367b09a1b0949b669047447018eaa9?rik=NGl2scFND9Uf3A&pid=ImgRaw&r=0')"></div>
                     <div class="info">
-                        <strong>Cupcake Chocolate</strong>
-                        <span class="price">R$ 9,50</span>
+                        <strong>Ninho e morango</strong>
+                        <span class="price">R$ 12,00</span>
+                        <button class="select-btn">Selecionar</button>
+                    </div>
+                </div>
+                <div class="item" data-name="Prestígio" data-price="12.00">
+                    <div class="thumb" style="background-image:url('https://tse3.mm.bing.net/th/id/OIP.oAIxiJI2-NYrUiKWEgZciwHaHa?cb=thfvnextfalcon2&rs=1&pid=ImgDetMain&o=7&rm=3')"></div>
+                    <div class="info">
+                        <strong>Prestígio</strong>
+                        <span class="price">R$ 12,00</span>
                         <button class="select-btn">Selecionar</button>
                     </div>
                 </div>
             </div>
         </section>
+
+        <section class="category" id="cupcakes">
+            <h2>Bolo de pote especial</h2>
+            <div class="items" id="cupcakes-items">
+                <div class="item" data-name="Bolo de ameixa" data-price="14.00">
+                    <div class="thumb" style="background-image:url('https://thfvnext.bing.com/th/id/R.a5c0f63ab1389f1aea9e60b59cfad519?rik=9taBZtiesIlDqg&pid=ImgRaw&r=0')"></div>
+                    <div class="info">
+                        <strong>Bolo de ameixa</strong>
+                        <span class="price">R$ 14,00</span>
+                        <button class="select-btn">Selecionar</button>
+                    </div>
+                </div>
+                <div class="item" data-name="Bolo de abacaixi" data-price="14.00">
+                    <div class="thumb" style="background-image:url('https://thfvnext.bing.com/th/id/R.0ce0b30e5b1c83366a7939ac3c281d17?rik=4PJZL4ZxPdbZ8A&riu=http%3a%2f%2ffestas.site%2fwp-content%2fuploads%2f2018%2f04%2fbolo-no-pote6.jpg&ehk=EfwSoXNv1OUSy1gZ6vGq7mXsQ8xeYqiTE1wlIcsl2fQ%3d&risl=&pid=ImgRaw&r=0')"></div>
+                    <div class="info">
+                        <strong>Bolo de abacaixi</strong>
+                        <span class="price">R$ 14,00</span>
+                        <button class="select-btn">Selecionar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="category" id="cupcakes">
+            <h2>guloseimas diversas</h2>
+            <div class="items" id="cupcakes-items">
+                <div class="item" data-name="Pão de mel un" data-price="8.50">
+                    <div class="thumb" style="background-image:url('https://i.ytimg.com/vi/zQKBeKweEVE/maxresdefault.jpg')"></div>
+                    <div class="info">
+                        <strong>Pão de mel un</strong>
+                        <span class="price">R$ 8,50</span>
+                        <button class="select-btn">Selecionar</button>
+                    </div>
+                </div>
+                <div class="item" data-name="brigadeiro un" data-price="1.00">
+                    <div class="thumb" style="background-image:url('https://pilotandofogao.com.br/wp-content/uploads/2022/08/Brigadeiro-gourmet-1024x683.jpg')"></div>
+                    <div class="info">
+                        <strong>brigadeiro un</strong>
+                        <span class="price">R$ 1,00</span>
+                        <button class="select-btn">Selecionar</button>
+                    </div>
+                </div>
+                <div class="item" data-name="Beijinho un" data-price="1.00">
+                    <div class="thumb" style="background-image:url('https://www.receitasagora.com.br/wp-content/uploads/2022/06/receita-de-beijinho-tradicional-1.jpg')"></div>
+                    <div class="info">
+                        <strong>Beijinho un</strong>
+                        <span class="price">R$ 1,00</span>
+                        <button class="select-btn">Selecionar</button>
+                    </div>
+                </div>
+                <div class="item" data-name="Gradnustache un" data-price="1.00">
+                    <div class="thumb" style="background-image:url('https://thfvnext.bing.com/th/id/R.0e4d36732dee22b9534344119a217995?rik=EIUbyXryfkbS9g&pid=ImgRaw&r=0')"></div>
+                    <div class="info">
+                        <strong>Gradnustache un</strong>
+                        <span class="price">R$ 1,00</span>
+                        <button class="select-btn">Selecionar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
     <!-- menu modal -->
     <div id="menu-modal" class="menu-modal" aria-hidden="true">
